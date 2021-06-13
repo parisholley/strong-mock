@@ -26,13 +26,13 @@ console.log(instance(foo).bar(23)); // 'I am strong!'
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Installation](#installation)
-- [Requirements](#requirements)
 - [Features](#features)
   - [Type safety](#type-safety)
   - [Useful error messages](#useful-error-messages)
   - [Type safe argument matchers](#type-safe-argument-matchers)
-- [API](#api)
+- [Installation](#installation)
+- [Requirements](#requirements)
+- [Usage](#usage)
   - [Setting expectations](#setting-expectations)
   - [Setting multiple expectations](#setting-multiple-expectations)
   - [Setting invocation count expectations](#setting-invocation-count-expectations)
@@ -52,20 +52,6 @@ console.log(instance(foo).bar(23)); // 'I am strong!'
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Installation
-
-```
-npm i -D strong-mock
-```
-
-```
-yarn add -D strong-mock
-```
-
-## Requirements
-
-strong-mock requires an environment that supports the [ES6 Proxy object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy). This is necessary to create dynamic mocks from types because TypeScript does not support reflection i.e. exposing the type info at runtime.
-
 ## Features
 
 ### Type safety
@@ -84,7 +70,31 @@ Error messages include the property that has been accessed, any arguments passed
 
 ![type safe matchers](./media/type-safe-matchers.png)
 
-## API
+## Installation
+
+```
+npm i -D strong-mock
+```
+
+```
+yarn add -D strong-mock
+```
+
+## Requirements
+
+strong-mock requires an environment that supports the [ES6 Proxy object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy). This is necessary to create dynamic mocks from types because TypeScript does not support reflection i.e. exposing the type info at runtime.
+
+## Usage
+
+```ts
+// Use as an ES module.
+import { mock, when, instance } from 'strong-mock';
+```
+
+```js
+// Use as a CommonJS module.
+const { mock, when, instance } = require('strong-mock');
+```
 
 ### Setting expectations
 

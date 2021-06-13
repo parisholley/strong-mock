@@ -3,9 +3,9 @@
 
   "compilerOptions": {
     "outDir": "./dist",
-    "module": "esnext"
+    "module": "ESNext",
+    "target": "ESNext"
   },
-
   "include": [
     "src/**/*"
   ]
